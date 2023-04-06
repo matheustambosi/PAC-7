@@ -1,33 +1,17 @@
 # Projeto PAC-7
 
 # Objetivo do projeto
-O projeto tem como objetivo prever sugestões de produtos de interesse do usuário, seja em pesquisas recentes ou compras, assim, facilitando a acessibilidade do usuário na busca dos produtos.
+O projeto tem como objetivo fazer previsões de preços de alugueis de determinadas regiões de Joinville/SC, de acordo com as características do local, como localização, quantidade de m², quartos, banheiros e entre outras variáveis.
 
 # Requisitos do protótipo
-Para efetivação desta proposta, será desenvolvido um sistema Web, junto de uma API para a listagem dos produtos. Utilizando aprendizagem de máquina, acessaremos a coleta de dados realizando uma filtragem para o usuário de acordo com as pesquisas e compras anteriores, para sugerir produtos da categoria de interesse.
+Para efetivação desta proposta, iremos utilizar a técnica de raspagem para coletar os dados de imóveis das regiões desejadas, assim como limpar dados "sujos", após isso iremos treinar a máquina para que consiga fazer previsões com base no dataset.
 
 # Funcionalidades do projeto
-- Login: O login é feito com email e senha, iremos criptografar a senha do usuário e armazena-la.
-- Cadastro: Para o cadastro de usuários.
-- Cadastro de produtos: Será possivel realizar o cadastro de produtos caso o usuário seja administrador.
-- Listagem dos produtos: Para listar todos os produtos cadastrados.
-- Filtro: Uma barra de pesquisa que irá armazenar os dados da pesquisa.
-- Carrinho: Para o usuário realizar as compras, e armazenar os produtos que forem adicionados no carrinho.
-- Sugestões: Grid de sugestões baseado no resultado do aprendizado de máquina.
-- Aprendizado de máquina: Irá analisar os dados coletados dos usuários e realizará uma previsão de sugestão de acordo com os dados.
+- Aprendizado de máquina: Irá analisar os dados coletados e realizará uma previsão de preço de acordo com os dados.
 
-# Tecnologias
-- API - C#
-- Frontend - Vue
-- Machine Learning - Go/Python
-- Testes e2e - Cypress
-
-# Banco de dados
-- Mongo/MySql
-
-# Infra
-- Pipeline
-- Amazon
+# Técnicas e Tecnologias
+- Data Scraping
+- Machine Learning - Python
 
 # Critérios escolhidos
 - Documentação - 20%
