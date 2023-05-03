@@ -23,3 +23,7 @@ Para efetivação desta proposta, iremos utilizar a técnica de raspagem para co
 - Leonardo Rodrigues
 - Matheus Tambosi
 - Vitor Adriel
+
+Resultado data scraping
+
+![image](https://user-images.githubusercontent.com/61556272/236065414-aff3288d-0528-4065-87c8-9c8b0c6e4cf8.png)
