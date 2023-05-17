@@ -47,7 +47,6 @@ df = pd.DataFrame(data)
 
 df.head()
 
-
 X = df[['Rooms', 'm²']]
 y = df['Price']
 
