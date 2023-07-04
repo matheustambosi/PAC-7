@@ -32,6 +32,8 @@ def preview(roomsParam: float, metersParam: float) -> float:
             bairroCidade_parts = bairroCidade.split(',')
             bairro = bairroCidade_parts[0].strip()
             cidade = bairroCidade_parts[1].strip()
+
+        print(bairro)
     
         numbers = re.findall(r'\d+', rooms)
         rooms = ''.join(numbers)
