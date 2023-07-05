@@ -39,7 +39,7 @@ Para efetivação desta proposta, iremos utilizar a técnica de raspagem para co
 ![image](https://user-images.githubusercontent.com/61556272/236065414-aff3288d-0528-4065-87c8-9c8b0c6e4cf8.png)
 
 # Equipe
-- Frederico Stein
-- Leonardo Rodrigues
-- Matheus Tambosi
-- Vitor Adriel
+- Frederico Stein &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://www.linkedin.com/in/frederico-bernardes-wust-stein-052bbb1a9/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank" width="80" height="20"></a>
+- Leonardo Rodrigues &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <a href="https://www.linkedin.com/in/leonardo-rodrigues-0a2043217/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank" width="80" height="20"></a>
+- Matheus Tambosi &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://www.linkedin.com/in/matheus-tambosi-a40b62196/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank" width="80" height="20"></a>
+- Vitor Adriel &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://www.linkedin.com/in/vitor-adriel-roecker-8571a11b0/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank" width="80" height="20"></a>
