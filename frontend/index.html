@@ -1,79 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Previsão Valores Ap</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <section>
-        <div class="container">
-            <h1>Previsão de preço imóveis - Joinville</h1>
+      <div class="container">
+        <h1>Previsão de preço imóveis - Joinville</h1>
 
-            <div class="content">
-                <div class="inputs">
-                    <div class="group">
-                        <label for="rooms" style="margin-right: 10px;">Quartos: </label>
-                        <input type="text" id="rooms">
-                    </div>
-                    <div class="group" style="margin-top: 10px;">
-                        <label class="meters" for="meters">M²: </label>
-                        <input type="text" id="meters">
-                    </div>
-                </div>
-
-                <button onclick="search()">Pesquisar</button>
+        <div class="content">
+          <div class="inputs">
+            <div class="group">
+              <label for="rooms" style="margin-right: 10px">Quartos: </label>
+              <input type="text" id="rooms" />
             </div>
-
-            <div class="result">
-                <h1 id="result"></h1>
+            <div class="group" style="margin-top: 10px">
+              <label class="meters" for="meters">M²: </label>
+              <input type="text" id="meters" />
             </div>
+          </div>
+
+          <button onclick="search()">Pesquisar</button>
         </div>
+
+        <div class="result">
+          <h1 id="result"></h1>
+        </div>
+      </div>
     </section>
-</body>
+  </body>
 
-<script>
+  <script>
     function search() {
-        let rooms = document.getElementById('rooms')
-        let meters = document.getElementById('meters')
+      let rooms = document.getElementById("rooms");
+      let meters = document.getElementById("meters");
 
-        if(!rooms.value || !meters.value) {
-            alert('Informe todos os campos.')
-            return
+      if (!rooms.value || !meters.value) {
+        alert("Informe todos os campos.");
+        return;
+      }
+
+      var request = new XMLHttpRequest();
+      var url = "http://127.0.0.1:5000/preview";
+      var data = {
+        rooms: rooms.value,
+        meters: meters.value,
+      };
+
+      request.open("POST", url, true);
+      request.setRequestHeader("Content-Type", "application/json");
+
+      request.onload = function () {
+        if (request.status >= 200 && request.status < 400) {
+          var response = JSON.parse(request.responseText);
+          debugger;
+          let result = document.getElementById("result");
+          result.innerHTML = formatReal(response.result);
+        } else {
+          console.error(
+            "Ocorreu um erro na solicitação. Código de status: " +
+              request.status
+          );
         }
+      };
 
-        var request = new XMLHttpRequest();
-        var url = 'http://127.0.0.1:5000/preview';
-        var data = {
-            rooms: rooms.value,
-            meters: meters.value
-        };
+      request.onerror = function () {
+        console.error("Ocorreu um erro na solicitação.");
+      };
 
-        request.open('POST', url, true);
-        request.setRequestHeader('Content-Type', 'application/json');
-
-        request.onload = function () {
-            if (request.status >= 200 && request.status < 400) {
-                var response = JSON.parse(request.responseText);
-                let result = document.getElementById('result')
-                result.innerHTML = response.result
-            } else {
-                console.error('Ocorreu um erro na solicitação. Código de status: ' + request.status);
-            }
-        };
-
-        request.onerror = function () {
-            console.error('Ocorreu um erro na solicitação.');
-        };
-
-        request.send(JSON.stringify(data));
+      request.send(JSON.stringify(data));
     }
-</script>
 
+    function formatReal(number) {
+      return (
+        "R$ " +
+        number
+          .toFixed(2)
+          .replace(".", ",")
+          .replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.")
+      );
+    }
+  </script>
 </html>

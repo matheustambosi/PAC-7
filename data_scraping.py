@@ -5,6 +5,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
+import math
 
 def preview(roomsParam: float, metersParam: float) -> float:
     page = requests.get("https://www.vivareal.com.br/venda/santa-catarina/joinville/apartamento_residencial")
@@ -62,7 +63,7 @@ def preview(roomsParam: float, metersParam: float) -> float:
     y_pred = model.predict(X_test)
     
     mse = mean_squared_error(y_test, y_pred)
-    print("Mean Squared Error:", mse)
+    print("Mean Squared Error:", math.sqrt(mse))
     
     new_data = {'Rooms': [roomsParam], 'm²': [metersParam]}
     new_df = pd.DataFrame(new_data)
